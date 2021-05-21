@@ -1,3 +1,3 @@
-# React
+# React 
 
-Learning react with documentation
+Learning React to makes front-end app to my portfolio API
