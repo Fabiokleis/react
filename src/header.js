@@ -12,7 +12,7 @@ class Header extends React.Component{
                     <Menu links={this.props.links}></Menu>
                     
                 </header>
-                <Counter count={25} ></Counter>
+                <Counter />
             </div>
         );
     }

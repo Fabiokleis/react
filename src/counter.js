@@ -1,5 +1,32 @@
 import React from 'react';
 
+function Counter(){
+    const [ count, setCounter ] = React.useState(1);
+
+    function add(){
+        setCounter(count + 1);
+    }
+
+    React.useEffect(() => {
+        if (localStorage.getItem("count")){
+            setCounter(parseInt(localStorage.getItem("count")));
+        }       
+    }, []);
+
+    React.useEffect(() => {
+        localStorage.setItem("count", count);
+        document.querySelector("h1").innerText = count;
+    }, [count]);
+
+    return (
+         <div>
+            <h1>Counter: {count}</h1>
+            <button onClick={add}>add</button>
+        </div>
+    );
+}
+
+/*
 class Counter extends React.Component{
 
     constructor(props){
@@ -28,5 +55,5 @@ class Counter extends React.Component{
         );
     }
 }
-
+*/
 export default Counter;
