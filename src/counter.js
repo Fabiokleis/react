@@ -10,7 +10,7 @@ function Counter(){
     React.useEffect(() => {
         if (localStorage.getItem("count")){
             setCounter(parseInt(localStorage.getItem("count")));
-        }       
+        }
     }, []);
 
     React.useEffect(() => {
